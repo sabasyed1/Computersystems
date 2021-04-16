@@ -1,0 +1,20 @@
+  .data
+  .text
+main:
+  # load values 1,2,3,4,5,6 to $t0
+  addi $t0, $t0, 1 
+  addi $t0, $t0, 2 
+  addi $t0, $t0, 3 
+  addi $t0, $t0, 4 
+  addi $t0, $t0, 5 
+  addi $t0, $t0, 6
+  
+  # display the result in $t0
+  # this prints the value in $t0 
+  li $v0, 1
+  add $a0, $0, $t0
+  syscall
+  
+  # terminate the program
+  li $v0, 10 
+  syscall
